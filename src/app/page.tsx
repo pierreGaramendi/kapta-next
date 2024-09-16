@@ -1,8 +1,9 @@
-import Image from "next/image";
-//import { button } from "@/components/ui/button"
-//import { Input } from "@/components/ui/input"
-//import { ArrowRight, CheckCircle, Layout, Users, Zap } from "lucide-react"
-import Link from "next/link"
+import { FaArrowRight } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
+import { FiLayout } from "react-icons/fi";
+import { HiUsers } from "react-icons/hi";
+import { GoZap } from "react-icons/go";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,9 +25,7 @@ export default function Home() {
           </Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <button className="hidden md:inline-flex hover:text-cyan-400 transition-colors">
-            Log in
-          </button>
+          <button className="hidden md:inline-flex hover:text-cyan-400 transition-colors">Log in</button>
           <button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-colors">Sign up</button>
         </div>
       </header>
@@ -42,10 +41,7 @@ export default function Home() {
             <button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-colors text-lg px-8 py-3">
               Get Started Free
             </button>
-            <button
-              
-              className="text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-colors text-lg px-8 py-3"
-            >
+            <button className="text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-colors text-lg px-8 py-3">
               Watch Demo
             </button>
           </div>
@@ -56,21 +52,21 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Powerful Features for Modern Teams</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-700 p-6 rounded-lg">
-                {/* <Layout className="text-cyan-400 w-12 h-12 mb-4" /> */}
+                <FiLayout className="text-cyan-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Flexible Boards</h3>
                 <p className="text-gray-400">
                   Customize your workflow with drag-and-drop Kanban boards that adapt to your team's needs.
                 </p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-               {/*  <Users className="text-cyan-400 w-12 h-12 mb-4" /> */}
+                <HiUsers className="text-cyan-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
                 <p className="text-gray-400">
                   Foster seamless communication and cooperation with built-in chat and file sharing.
                 </p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-               {/*  <Zap className="text-cyan-400 w-12 h-12 mb-4" /> */}
+                <GoZap className="text-cyan-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Agile Sprints</h3>
                 <p className="text-gray-400">Plan, track, and manage sprints with ease using our intuitive Scrum tools.</p>
               </div>
@@ -89,15 +85,15 @@ export default function Home() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Up to 5 team members</span>
                   </li>
                   <li className="flex items-center">
-                  {/*   <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Basic Kanban boards</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Limited file storage</span>
                   </li>
                 </ul>
@@ -110,19 +106,19 @@ export default function Home() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                  {/*   <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Unlimited team members</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Advanced Scrum & Kanban tools</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Unlimited file storage</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Priority support</span>
                   </li>
                 </ul>
@@ -133,19 +129,19 @@ export default function Home() {
                 <p className="text-3xl font-bold mb-6">Custom</p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    {/* <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>All Pro features</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Advanced security & compliance</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Dedicated account manager</span>
                   </li>
                   <li className="flex items-center">
-                   {/*  <CheckCircle className="text-cyan-400 w-5 h-5 mr-2" /> */}
+                    <FaCheckCircle className="text-cyan-400 w-5 h-5 mr-2" />
                     <span>Custom integrations</span>
                   </li>
                 </ul>
@@ -196,7 +192,9 @@ export default function Home() {
               Join thousands of teams already using TaskFlow to streamline their workflows.
             </p>
             <button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-colors text-lg px-8 py-3">
-              Get Started Free {/* <ArrowRight className="ml-2" /> */}
+              <span>
+                Get Started Free <FaArrowRight className="ml-2" />{" "}
+              </span>
             </button>
           </div>
         </section>
