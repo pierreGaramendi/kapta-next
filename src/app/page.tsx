@@ -41,8 +41,9 @@ export default function Home() {
             <button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-colors text-lg px-8 py-3">
               Get Started Free
             </button>
+
             <button className="text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-colors text-lg px-8 py-3">
-              Watch Demo
+              <Link href="/w/dashboard">Watch Demo</Link>
             </button>
           </div>
         </section>

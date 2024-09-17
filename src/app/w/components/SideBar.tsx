@@ -20,8 +20,10 @@ export function Sidebar() {
   useEffect(() => {
     const fetchData = async () => {
       const response2 = await axios('/api/test/get');
+      const projects = await axios('/api/projects/get');
       //const responsePOST = await axios.post('/api/test/post');
       console.log(response2.data);
+      console.log(projects.data);
       setData(1);
     };
     fetchData();

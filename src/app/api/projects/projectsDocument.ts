@@ -17,5 +17,5 @@ const projectSchema = new Schema({
   ],
 });
 
-const BannerDocument = mongoose.model("Project", projectSchema);
-export default mongoose.models.Project || BannerDocument;
+const ProjectDocument = mongoose.model("Project", projectSchema);
+export default mongoose.models.Project || ProjectDocument;
