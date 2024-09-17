@@ -1,6 +1,4 @@
 "use client";
-import { RiTaskFill } from "react-icons/ri";
-import { IoMdHome } from "react-icons/io";
 import { Sidebar } from "./components/SideBar";
 
 export default function ({

@@ -10,7 +10,7 @@ const routes = [
   { name: "Home", path: "/w/dashboard", icon: <IoMdHome size={15} /> },
   { name: "Backlog", path: "/w/lists", icon: <IoMdSettings size={15} /> },
   { name: "Workspaces", path: "/w/workspaces", icon: <IoMdSettings size={15} /> },
-  { name: "Tableros", path: "/w/lists", icon: <IoMdSettings size={15} /> },
+  { name: "Tableros", path: "/w/board", icon: <IoMdSettings size={15} /> },
   { name: "Settings", path: "/w/settings", icon: <IoMdSettings size={15} /> },
 ];
 
@@ -19,11 +19,18 @@ export function Sidebar() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response2 = await axios('/api/test/get');
-      const projects = await axios('/api/projects/get');
+      try {
+        // 
+        const me = await axios("/api/user/me");
+        const projects = await axios("/api/projects/get");
+        console.log(me.data);
+        console.log(projects.data);
+      } catch (error: any) {
+        console.error(error.response.data); // NOTE - use "error.response.data` (not "error")
+      }
+
       //const responsePOST = await axios.post('/api/test/post');
-      console.log(response2.data);
-      console.log(projects.data);
+      //sconsole.log(projects);
       setData(1);
     };
     fetchData();
