@@ -1,7 +1,6 @@
 import dbConnect from "@/app/lib/mongo";
 import { NextResponse } from "next/server";
-import BannerDocument from "../../BannerModel";
-import ProjectDocument from "../projectsDocument";
+import ProjectDocument from "../projects.document";
 
 export async function GET() {
   await dbConnect();

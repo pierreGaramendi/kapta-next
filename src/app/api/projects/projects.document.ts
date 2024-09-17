@@ -5,7 +5,7 @@ const projectSchema = new Schema({
   description: String,
   start_date: Date,
   end_date: Date,
-  owner_id: { type: Schema.Types.ObjectId, ref: "Member", required: true },
+  owner_id: { type: Schema.Types.ObjectId, ref: "User", required: true },
   status: { type: String, enum: ["active", "completed", "archived"], default: "active" },
   backlog_general_id: { type: Schema.Types.ObjectId, ref: "BacklogGeneral" },
   sprints: [{ type: Schema.Types.ObjectId, ref: "Sprint" }],
