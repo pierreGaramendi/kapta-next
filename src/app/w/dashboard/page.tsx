@@ -1,43 +1,54 @@
 "use client";
-import { GoQuestion } from "react-icons/go";
-import { IoIosSettings } from "react-icons/io";
+import { useStoreProjects } from "@/app/store/project.store";
+import { DashboardTopbar } from "./components/dashboard-topbar/DashboardTopbar";
+import { DashboardSummary } from "./components/dashboard-summary/DashboardSummary";
 
 export default function Page() {
+  const { projects } = useStoreProjects((state: any) => state);
   return (
-    <div className="bg-neutral-950 flex-1 h-full rounded-md p-2">
-      <header className="rounded-md flex flex-row p-2 justify-between">
-        <div>
-          <h1 className="font-bold">Home</h1>
-          <h2>Monitor all of your projects and task here</h2>
-        </div>
-        <div className="flex flex-row justify-end items-center">
-          <div>
-            <input type="text" className="rounded-md p-1 text-black"/>
+    <div className="bg-zinc-950 h-full rounded-md p-2 flex flex-col">
+      <DashboardTopbar />
+      <DashboardSummary />
+      <div className="flex flex-row h-full">
+        <div className="overflow-y-auto w-full bg-zinc-900 rounded-lg">
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
           </div>
-          <GoQuestion size={25}/>
-          <IoIosSettings size={25}/>
-          <div>
-            <div className="rounded-full border border-neutral-400 p-2">JB</div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          </div>
+          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
           </div>
         </div>
-      </header>
-      <div className="border border-neutral-500 rounded-md flex flex-row mt-2">
-        <div className="flex flex-col w-full justify-center p-4">
-          <span>Total Projects</span>
-          <span className="font-bold text-2xl">1</span>
-        </div>
-        <div className="flex flex-col w-full p-4">
-          <span>Total Tasks</span>
-          <span className="font-bold text-2xl">3</span>
-        </div>
-        <div className="flex flex-col w-full p-4">
-          <span>Assigens Tasks</span>
-          <span className="font-bold text-2xl">1</span>
-        </div>
-        <div className="flex flex-col w-full p-4">
-          <span>Completed Taskts</span>
-          <span className="font-bold text-2xl">0</span>
-        </div>
+        <div className="rounded-lg w-full"></div>
       </div>
     </div>
   );

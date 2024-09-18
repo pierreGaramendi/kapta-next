@@ -11,7 +11,5 @@ export async function GET() {
     };
   }
   const serializedProjects = JSON.parse(JSON.stringify(projects));
-  return NextResponse.json({
-    projects: serializedProjects,
-  });
+  return NextResponse.json(serializedProjects);
 }

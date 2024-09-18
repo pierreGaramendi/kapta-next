@@ -7,9 +7,9 @@ export default function ({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-row min-h-screen bg-neutral-900">
+    <div className="flex flex-row h-screen bg-zinc-900 overflow-hidden">
       <Sidebar />
-      <div className="flex-1 py-3 pr-3">{children}</div>
+      <div className="py-3 pr-3 w-full">{children}</div>
     </div>
   );
 }
