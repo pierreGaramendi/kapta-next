@@ -9,8 +9,7 @@ import { useStoreProjects } from "@/app/store/project.store";
 
 const routes = [
   { name: "Home", path: "/w/dashboard", icon: <IoMdHome size={15} /> },
-  { name: "Backlog", path: "/w/lists", icon: <IoMdSettings size={15} /> },
-  { name: "Workspaces", path: "/w/workspaces", icon: <IoMdSettings size={15} /> },
+  { name: "Backlog", path: "/w/backlog", icon: <IoMdSettings size={15} /> },
   { name: "Tableros", path: "/w/board", icon: <IoMdSettings size={15} /> },
   { name: "Settings", path: "/w/settings", icon: <IoMdSettings size={15} /> },
 ];
@@ -48,7 +47,7 @@ export function Sidebar() {
       <div className="mt-4">
         <hr className="my-3 border-zinc-700" />
         <button
-          className={`flex flex-row bg-zinc-800 font-bold items-center whitespace-nowrap rounded-md text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 w-full justify-start`}
+          className={`flex flex-row bg-zinc-800 font-bold items-center whitespace-nowrap rounded text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 w-full justify-start`}
         >
           <IoMdSettings size={15} />
           <span className="ml-2">Espacio de Trabajo</span>
@@ -58,7 +57,7 @@ export function Sidebar() {
           <div key={index}>
             <Link href={route.path}>
               <button
-                className={`flex flex-row bg-zinc-800 font-bold items-center whitespace-nowrap rounded-md text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 w-full justify-start ${
+                className={`flex flex-row bg-zinc-800 font-bold items-center whitespace-nowrap rounded text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 w-full justify-start ${
                   pathname === route.path
                     ? "!bg-indigo-600 text-white"
                     : "hover:bg-indigo-500 hover:text-white text-gray-400 hover:translate-x-2"

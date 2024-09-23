@@ -1,54 +1,33 @@
-"use client";
-import { useStoreProjects } from "@/app/store/project.store";
 import { DashboardTopbar } from "./components/dashboard-topbar/DashboardTopbar";
 import { DashboardSummary } from "./components/dashboard-summary/DashboardSummary";
+import { BacklogItem } from "../components/bl-item/BacklogItem";
 
 export default function Page() {
-  const { projects } = useStoreProjects((state: any) => state);
+  const tasks = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
-    <div className="bg-zinc-950 h-full rounded-md p-2 flex flex-col">
+    <div className="bg-zinc-950 h-full rounded p-4 flex flex-col">
       <DashboardTopbar />
       <DashboardSummary />
-      <div className="flex flex-row h-full">
-        <div className="overflow-y-auto w-full bg-zinc-900 rounded-lg">
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+      <div className="flex flex-row h-full mt-2">
+        <div className="overflow-hidden w-full h-full bg-zinc-900 rounded">
+          <div id="title" className="font-bold sticky border-dotted border-b border-zinc-500 w-full p-4">
+            Tareas Asignadas
           </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
-          </div>
-          <div className="rounded-lg w-full bg-zinc-900 p-4 mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, neque culpa ducimus tenetur ipsum ut dolore pariatur, deleniti sapiente quis placeat libero cum unde voluptatem voluptas molestiae accusamus dolorem!
+          <div id="content" className="overflow-y-auto h-full p-2">
+            {tasks.map((index: number) => (
+              <BacklogItem
+                key={index}
+                title="Task Title"
+                description="This is a brief description of the task."
+                labels={["Feature", "Frontend"]}
+                priority="medium"
+                dueDate="2024-09-18"
+                className="mb-4"
+              />
+            ))}
           </div>
         </div>
-        <div className="rounded-lg w-full"></div>
+        <div className="rounded w-full"></div>
       </div>
     </div>
   );

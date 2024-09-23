@@ -7,17 +7,14 @@ const projectSchema = new Schema({
   end_date: Date,
   owner_id: { type: Schema.Types.ObjectId, ref: "UserKapta", required: true },
   status: { type: String, enum: ["active", "completed", "archived"], default: "active" },
-  backlog_general_id: { type: Schema.Types.ObjectId, ref: "BacklogGeneral" },
+  backlog_id: { type: Schema.Types.ObjectId, ref: "Backlog" },
   sprints: [{ type: Schema.Types.ObjectId, ref: "Sprint" }],
   members: [
     {
-      _id: { type: Schema.Types.ObjectId, ref: "Member" },
+      _id: { type: Schema.Types.ObjectId, ref: "UserKapta" },
       role_id: { type: Schema.Types.ObjectId, ref: "Role" },
     },
   ],
 });
-
-/* const ProjectDocument = mongoose.model("Project", projectSchema);
-export default mongoose.models.Project || ProjectDocument; */
 
 export const ProjectDocument = mongoose.models.Project || mongoose.model("Project", projectSchema);

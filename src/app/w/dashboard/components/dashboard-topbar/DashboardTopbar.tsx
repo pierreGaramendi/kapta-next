@@ -1,11 +1,9 @@
-"use client";
-
-import { FaBell, FaChevronDown } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 
 export const DashboardTopbar = () => {
   return (
-    <header className="rounded-md flex flex-row p-2 justify-between">
+    <header className="rounded flex flex-row p-2 justify-between">
       <div>
         <h1 className="font-bold">Home</h1>
         <h2>Monitor all of your projects and tasks here</h2>

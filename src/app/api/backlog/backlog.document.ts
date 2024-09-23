@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const backlogItemSchema = new Schema({
+export const backlogItemSchema = new Schema({
   type: { type: String, enum: ["Epic", "Story", "Task", "Test", "Bug"], required: true },
   title: { type: String, required: true },
   description: String,
@@ -12,7 +12,9 @@ const backlogItemSchema = new Schema({
 
 const backlogSchema = new Schema({
   project_id: { type: Schema.Types.ObjectId, ref: "Project", required: true },
-  items: [backlogItemSchema],
+  //items: [backlogItemSchema],
+  items: [{ type: Schema.Types.ObjectId, ref: "BacklogItem" }],
 });
 
+export const backlogItemDocument = mongoose.models.BacklogItem || mongoose.model("BacklogItem", backlogItemSchema);
 export const BacklogDocument = mongoose.models.Backlog || mongoose.model("Backlog", backlogSchema);
