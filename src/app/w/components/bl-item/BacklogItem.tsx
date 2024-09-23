@@ -29,7 +29,7 @@ export const BacklogItem: React.FC<TaskCardProps> = ({
   };
 
   return (
-    <div className={`bg-zinc-800 text-white p-4 rounded-lg shadow-md ${className || ""}`}>
+    <div className={`bg-zinc-800 text-white p-4 rounded shadow-md ${className || ""}`}>
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="flex space-x-2">

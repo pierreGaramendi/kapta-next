@@ -8,7 +8,7 @@ interface TaskDetailsProps {
 
 const TaskDetails: React.FC<TaskDetailsProps> = ({ assignee, sprint, team }) => {
   return (
-    <div className="bg-zinc-800 text-gray-300 p-4 rounded-lg">
+    <div className="bg-zinc-800 text-gray-300 p-4 rounded">
       <h2 className="font-semibold text-lg">Detalles</h2>
       <div className="mt-4">
         <div className="flex items-center mb-2">
@@ -51,13 +51,13 @@ export const TaskComponent: React.FC = () => {
           </div>
 
           {/* Comment Section */}
-          <div className="bg-zinc-800 p-4 rounded-lg">
+          <div className="bg-zinc-800 p-4 rounded">
             <div className="flex items-center mb-2">
               <div className="bg-red-500 h-8 w-8 rounded-full text-center text-white">PM</div>
               <input
                 type="text"
                 placeholder="Añadir un comentario..."
-                className="bg-zinc-700 w-full ml-4 p-2 rounded-lg text-gray-300"
+                className="bg-zinc-700 w-full ml-4 p-2 rounded text-gray-300"
               />
             </div>
             <p className="text-gray-500 text-sm">

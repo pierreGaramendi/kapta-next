@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-900 text-zinc-100">
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">K</div>
+          <div className="w-10 h-10 bg-indigo-500 rounded flex items-center justify-center text-white font-bold text-xl">K</div>
           <span className="text-xl font-bold">Kapta</span>
         </div>
         <nav className="hidden md:flex space-x-6">
@@ -52,21 +52,21 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Powerful Features for Modern Teams</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-zinc-700 p-6 rounded-lg">
+              <div className="bg-zinc-700 p-6 rounded">
                 <FiLayout className="text-indigo-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Flexible Boards</h3>
                 <p className="text-zinc-400">
                   Customize your workflow with drag-and-drop Kanban boards that adapt to your team's needs.
                 </p>
               </div>
-              <div className="bg-zinc-700 p-6 rounded-lg">
+              <div className="bg-zinc-700 p-6 rounded">
                 <HiUsers className="text-indigo-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
                 <p className="text-zinc-400">
                   Foster seamless communication and cooperation with built-in chat and file sharing.
                 </p>
               </div>
-              <div className="bg-zinc-700 p-6 rounded-lg">
+              <div className="bg-zinc-700 p-6 rounded">
                 <GoZap className="text-indigo-400 w-12 h-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Agile Sprints</h3>
                 <p className="text-zinc-400">Plan, track, and manage sprints with ease using our intuitive Scrum tools.</p>
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Simple, Transparent Pricing</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-zinc-800 p-8 rounded-lg border border-zinc-700">
+              <div className="bg-zinc-800 p-8 rounded border border-zinc-700">
                 <h3 className="text-xl font-semibold mb-4">Basic</h3>
                 <p className="text-3xl font-bold mb-6">
                   $0<span className="text-xl font-normal text-zinc-400">/month</span>
@@ -100,7 +100,7 @@ export default function Home() {
                 </ul>
                 <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Get Started</button>
               </div>
-              <div className="bg-zinc-800 p-8 rounded-lg border border-indigo-500">
+              <div className="bg-zinc-800 p-8 rounded border border-indigo-500">
                 <h3 className="text-xl font-semibold mb-4">Pro</h3>
                 <p className="text-3xl font-bold mb-6">
                   $12<span className="text-xl font-normal text-zinc-400">/user/month</span>
@@ -125,7 +125,7 @@ export default function Home() {
                 </ul>
                 <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Start Free Trial</button>
               </div>
-              <div className="bg-zinc-800 p-8 rounded-lg border border-zinc-700">
+              <div className="bg-zinc-800 p-8 rounded border border-zinc-700">
                 <h3 className="text-xl font-semibold mb-4">Enterprise</h3>
                 <p className="text-3xl font-bold mb-6">Custom</p>
                 <ul className="space-y-3 mb-8">
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">What Our Customers Say</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-zinc-700 p-6 rounded-lg">
+              <div className="bg-zinc-700 p-6 rounded">
                 <p className="text-lg mb-4">
                   "TaskFlow has revolutionized our team's productivity. The intuitive interface and powerful features have made
                   project management a breeze."
@@ -169,7 +169,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-zinc-700 p-6 rounded-lg">
+              <div className="bg-zinc-700 p-6 rounded">
                 <p className="text-lg mb-4">
                   "We've tried many project management tools, but TaskFlow stands out with its perfect blend of Scrum and Kanban
                   methodologies. It's a game-changer!"

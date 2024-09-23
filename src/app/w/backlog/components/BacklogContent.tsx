@@ -48,11 +48,11 @@ export const BacklogContent = () => {
               <>
                 <div id="sprint-section-content" className="flex flex-row justify-between p-2" key={index}>
                   <div id="sprint-item-left" className="flex flex-row">
-                    <div className="font-bold flex items-center justify-center bg-red-800 rounded-lg w-[25px] h-[25px] mr-2 "></div>
+                    <div className="font-bold flex items-center justify-center bg-red-800 rounded w-[25px] h-[25px] mr-2 "></div>
                     <span>DM-1 fix the bug on the navigation bar</span>
                   </div>
                   <div id="sprint-item-right" className="flex flex-row">
-                    <select name="pets" id="pet-select" className="text-white pl-2 bg-zinc-600 rounded-lg">
+                    <select name="pets" id="pet-select" className="text-white pl-2 bg-zinc-600 rounded">
                       <option value="">Todo</option>
                       <option value="dog">Doing</option>
                       <option value="cat">Done</option>
