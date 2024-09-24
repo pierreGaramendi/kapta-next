@@ -25,8 +25,8 @@ export default function Home() {
           </Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <button className="hidden md:inline-flex hover:text-indigo-400 transition-colors">Log in</button>
-          <button className="bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Sign up</button>
+          <button className="hidden md:inline-flex rounded hover:text-indigo-400 transition-colors">Log in</button>
+          <button className="bg-indigo-500 rounded hover:bg-indigo-600 text-white transition-colors">Sign up</button>
         </div>
       </header>
 
@@ -38,11 +38,11 @@ export default function Home() {
             productivity today.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-indigo-500 hover:bg-indigo-600 text-white transition-colors text-lg px-8 py-3">
+            <button className="bg-indigo-500 hover:bg-indigo-600 text-white transition-colors text-lg px-8 py-3 rounded">
               Get Started Free
             </button>
 
-            <button className="text-indigo-400 border-indigo-400 hover:bg-indigo-400 hover:text-zinc-900 transition-colors text-lg px-8 py-3">
+            <button className="text-indigo-400 border-indigo-400 hover:bg-indigo-400 hover:text-zinc-900 transition-colors text-lg px-8 py-3 rounded">
               <Link href="/w/dashboard">Watch Demo</Link>
             </button>
           </div>
@@ -98,7 +98,9 @@ export default function Home() {
                     <span>Limited file storage</span>
                   </li>
                 </ul>
-                <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Get Started</button>
+                <button className="rounded w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">
+                  Get Started
+                </button>
               </div>
               <div className="bg-zinc-800 p-8 rounded border border-indigo-500">
                 <h3 className="text-xl font-semibold mb-4">Pro</h3>
@@ -123,7 +125,9 @@ export default function Home() {
                     <span>Priority support</span>
                   </li>
                 </ul>
-                <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Start Free Trial</button>
+                <button className="rounded w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">
+                  Start Free Trial
+                </button>
               </div>
               <div className="bg-zinc-800 p-8 rounded border border-zinc-700">
                 <h3 className="text-xl font-semibold mb-4">Enterprise</h3>
@@ -146,7 +150,9 @@ export default function Home() {
                     <span>Custom integrations</span>
                   </li>
                 </ul>
-                <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">Contact Sales</button>
+                <button className="rounded w-full bg-indigo-500 hover:bg-indigo-600 text-white transition-colors">
+                  Contact Sales
+                </button>
               </div>
             </div>
           </div>
@@ -192,11 +198,12 @@ export default function Home() {
             <p className="text-xl text-zinc-400 mb-8">
               Join thousands of teams already using TaskFlow to streamline their workflows.
             </p>
-            <button className="bg-indigo-500 hover:bg-indigo-600 text-white transition-colors text-lg px-8 py-3">
-              <span>
-                Get Started Free <FaArrowRight className="ml-2" />{" "}
-              </span>
-            </button>
+            <div className="flex justify-center">
+              <button className="bg-indigo-500 rounded hover:bg-indigo-600 text-white transition-colors text-lg px-8 py-3 flex flex-row items-center">
+                <span>Get Started Free</span>
+                <FaArrowRight className="ml-2" />
+              </button>
+            </div>
           </div>
         </section>
       </main>

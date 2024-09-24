@@ -3,13 +3,13 @@ import { DashboardSummary } from "./components/dashboard-summary/DashboardSummar
 import { BacklogItem } from "../components/bl-item/BacklogItem";
 
 export default function Page() {
-  const tasks = [1, 2, 3, 4, 5, 6, 7, 8];
+  const tasks = [1, 2,3,4,5,6,7];
   return (
-    <div className="bg-zinc-950 h-full rounded p-4 flex flex-col">
+    <div id="page-dashboard" className="bg-zinc-950 h-full p-4 flex flex-col">
       <DashboardTopbar />
       <DashboardSummary />
       <div className="flex flex-row h-full mt-2">
-        <div className="overflow-hidden w-full h-full bg-zinc-900 rounded">
+        <div className="overflow-hidden w-full bg-zinc-900 rounded">
           <div id="title" className="font-bold sticky border-dotted border-b border-zinc-500 w-full p-4">
             Tareas Asignadas
           </div>
