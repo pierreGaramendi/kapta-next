@@ -9,7 +9,7 @@ export default function Page() {
       <DashboardTopbar />
       <BacklogTitle />
       <BacklogFilters />
-      <div className="p-4 h-full overflow-hidden">
+      <div className="h-full overflow-hidden">
         <BacklogContent />
       </div>
     </div>

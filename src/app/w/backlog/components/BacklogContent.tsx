@@ -104,7 +104,7 @@ export const BacklogContent = () => {
       </div>
       <Modal isDismissable isOpen={isOpen} onOpenChange={setOpen}>
         <Dialog>
-          <Heading slot="title">Notice</Heading>
+          {/* <Heading slot="title">Notice</Heading> */}
           <BeginSprint></BeginSprint>
         </Dialog>
       </Modal>

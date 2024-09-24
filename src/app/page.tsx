@@ -26,7 +26,7 @@ export default function Home() {
         </nav>
         <div className="flex items-center space-x-4">
           <button className="hidden md:inline-flex rounded hover:text-indigo-400 transition-colors">Log in</button>
-          <button className="bg-indigo-500 rounded hover:bg-indigo-600 text-white transition-colors">Sign up</button>
+          <button className="bg-indigo-500 rounded px-4 hover:bg-indigo-600 text-white transition-colors">Sign up</button>
         </div>
       </header>
 

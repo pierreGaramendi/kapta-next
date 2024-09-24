@@ -23,9 +23,9 @@ export const BacklogItem: React.FC<TaskCardProps> = ({
   className,
 }) => {
   const priorityColors = {
-    low: "bg-green-500",
-    medium: "bg-yellow-500",
-    high: "bg-red-500",
+    low: "bg-green-600",
+    medium: "bg-yellow-600",
+    high: "bg-red-600",
   };
 
   return (
