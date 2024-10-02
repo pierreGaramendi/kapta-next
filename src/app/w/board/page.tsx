@@ -124,14 +124,14 @@ export default function Page() {
       </div>
       <Modal isDismissable isOpen={isOpen} onOpenChange={setOpen}>
         <Dialog>
-          {/* <TaskView
+           {/* <TaskView
             title="Historia 1"
             assignedTo={{ name: "Pierre Garamendi Marquez", initials: "PM" }}
             sprint="Tablero Sprint 2"
             created="20 hours ago"
             updated="1 hour ago"
-          /> */}
-          <TaskComponent></TaskComponent>
+          />  */}
+           <TaskComponent></TaskComponent>
         </Dialog>
       </Modal>
     </>
