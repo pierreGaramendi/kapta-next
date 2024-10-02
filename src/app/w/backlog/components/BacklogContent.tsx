@@ -16,8 +16,8 @@ export const BacklogContent = () => {
   return (
     <>
       <div className="pt-4 overflow-y-auto h-full">
-        <div id="sprint-section-header" className=" mb-6 rounded">
-          <header id="sprint-header" className="flex flex-row justify-between p-2 bg-zinc-800 rounded shadow-lg">
+        <div id="sprint-section-header" className="mb-6 rounded border-[0.5px]  border-zinc-700">
+          <header id="sprint-header" className="flex flex-row justify-between p-2 bg-zinc-800 rounded-t shadow-lg">
             <div id="sprint-header-left" className="text-center flex items-center font-bold">
               Backlog
             </div>
@@ -28,7 +28,7 @@ export const BacklogContent = () => {
               <Tooltip
                 id="my-tooltip"
                 className="custome-tooltip-1"
-                style={{ backgroundColor: "#18181b", color: "white", border:"solid", borderColor:"white" }}
+                style={{ backgroundColor: "#18181b", color: "white", border: "solid", borderColor: "white" }}
               />
               <button
                 className="bg-indigo-600 p-1 mr-2 rounded px-4"
@@ -68,8 +68,8 @@ export const BacklogContent = () => {
           </section>
         </div>
         {sprints.map((index: number) => (
-          <div id="sprint-section-header" className=" mb-6 rounded" key={index}>
-            <header id="sprint-header" className="flex flex-row justify-between p-2 bg-zinc-800 rounded shadow-lg">
+          <div id="sprint-section-header" className="mb-6 rounded border-[0.5px]  border-zinc-700" key={index}>
+            <header id="sprint-header" className="flex flex-row justify-between p-2 bg-zinc-800 rounded-t shadow-lg">
               <div id="sprint-header-left" className="text-center flex items-center font-bold">
                 Sprint {index} (3 issues)
               </div>
@@ -81,22 +81,25 @@ export const BacklogContent = () => {
             </header>
             <section>
               {items.map((index: number) => (
-                <div id="sprint-section-content" className="flex flex-row justify-between p-2" key={index}>
-                  <div id="sprint-item-left" className="flex flex-row">
-                    <div className="font-bold flex items-center justify-center bg-red-800 rounded w-[25px] h-[25px] mr-2 "></div>
-                    <span>DM-1 fix the bug on the navigation bar</span>
-                  </div>
-                  <div id="sprint-item-right" className="flex flex-row">
-                    <select name="pets" id="pet-select" className="text-white pl-2 bg-zinc-600 rounded">
-                      <option value="">Todo</option>
-                      <option value="dog">Doing</option>
-                      <option value="cat">Done</option>
-                    </select>
-                    <div className="ml-2 font-bold flex items-center justify-center bg-red-800 rounded-full w-[25px] h-[25px]">
-                      P
+                <>
+                  <div id="sprint-section-content" className="flex flex-row justify-between p-2" key={index}>
+                    <div id="sprint-item-left" className="flex flex-row">
+                      <div className="font-bold flex items-center justify-center bg-red-800 rounded w-[25px] h-[25px] mr-2 "></div>
+                      <span>DM-1 fix the bug on the navigation bar</span>
+                    </div>
+                    <div id="sprint-item-right" className="flex flex-row">
+                      <select name="pets" id="pet-select" className="text-white pl-2 bg-zinc-600 rounded">
+                        <option value="">Todo</option>
+                        <option value="dog">Doing</option>
+                        <option value="cat">Done</option>
+                      </select>
+                      <div className="ml-2 font-bold flex items-center justify-center bg-red-800 rounded-full w-[25px] h-[25px]">
+                        P
+                      </div>
                     </div>
                   </div>
-                </div>
+                  <hr className=" border-zinc-700" />
+                </>
               ))}
             </section>
           </div>
