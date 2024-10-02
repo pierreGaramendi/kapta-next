@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useStoreProjects } from "@/app/store/project.store";
+import { useRouter } from "next/navigation";
 
 const routes = [
   { name: "Home", path: "/w/dashboard", icon: <IoMdHome size={15} /> },
@@ -15,6 +16,7 @@ const routes = [
 ];
 
 export function Sidebar() {
+  const router = useRouter();
   const [dataz, setData] = useState<any>(null);
   const { projects, updateProjects } = useStoreProjects((state: any) => state);
   useEffect(() => {
@@ -40,7 +42,7 @@ export function Sidebar() {
   const pathname = usePathname();
   return (
     <div className="p-3 min-w-[200px] max-w-[200px] bg-zinc-900">
-      <div id="logo" className="flex flex-row items-center py-2">
+      <div id="logo" className="flex flex-row items-center py-2 cursor-pointer" onClick={() => router.push("/w/dashboard")}>
         <RiTaskFill size={35} className="text-indigo-500" />
         <span className="ml-2 text-2xl font-black text-white">Kapta</span>
       </div>
