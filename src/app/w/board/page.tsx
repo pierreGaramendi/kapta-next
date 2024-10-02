@@ -1,17 +1,14 @@
 "use client";
-
 import { useState } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { CiChat1 } from "react-icons/ci";
 import { Dialog, Heading, Modal, ModalOverlay } from "react-aria-components";
-import { TaskView } from "../backlog/components/TaskView";
 import { TaskComponent } from "../backlog/components/TaskComponent";
 import { DashboardTopbar } from "../dashboard/components/dashboard-topbar/DashboardTopbar";
 
 export default function Page() {
   let [isOpen, setOpen] = useState(false);
   const toOpenModal = () => {
-    console.log("toOpenModal");
     setOpen(true);
   };
   const initialColumns = [
@@ -74,7 +71,7 @@ export default function Page() {
   return (
     <>
       <div>
-      <DashboardTopbar />
+        <DashboardTopbar />
         <main className="flex-1 flex flex-col">
           <div className="flex-1 p-6 overflow-x-auto">
             <div>
@@ -124,14 +121,7 @@ export default function Page() {
       </div>
       <Modal isDismissable isOpen={isOpen} onOpenChange={setOpen}>
         <Dialog>
-           {/* <TaskView
-            title="Historia 1"
-            assignedTo={{ name: "Pierre Garamendi Marquez", initials: "PM" }}
-            sprint="Tablero Sprint 2"
-            created="20 hours ago"
-            updated="1 hour ago"
-          />  */}
-           <TaskComponent></TaskComponent>
+          <TaskComponent></TaskComponent>
         </Dialog>
       </Modal>
     </>
