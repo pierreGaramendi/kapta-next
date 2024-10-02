@@ -2,7 +2,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 export const ButtonConfig = () => {
   return (
-    <button className="bg-zinc-800 border-[0.5px] rounded p-1">
+    <button className="bg-zinc-800 border-[0.5px] rounded p-1 border-zinc-700">
       <BsThreeDotsVertical size={20} />
     </button>
   );

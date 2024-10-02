@@ -6,9 +6,9 @@ export default function ({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-row h-screen bg-zinc-900 overflow-hidden">
+    <div className="flex flex-row h-screen bg-zinc-950 overflow-hidden">
       <Sidebar />
-      <div className="w-full">{children}</div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }

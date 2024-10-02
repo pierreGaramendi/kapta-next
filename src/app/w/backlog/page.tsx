@@ -5,13 +5,13 @@ import { BacklogTitle } from "./components/BacklogTitle";
 
 export default function Page() {
   return (
-    <div className="bg-zinc-950 h-full rounded p-4 flex flex-col">
+    <>
       <DashboardTopbar />
-      <BacklogTitle />
-      <BacklogFilters />
-      <div className="h-full overflow-hidden">
+      <div className="flex flex-col h-full p-6 overflow-y-auto box-border">
+        <BacklogTitle />
+        <BacklogFilters />
         <BacklogContent />
       </div>
-    </div>
+    </>
   );
 }

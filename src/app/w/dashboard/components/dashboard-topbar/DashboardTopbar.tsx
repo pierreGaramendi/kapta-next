@@ -3,7 +3,7 @@ import { IoMdSettings } from "react-icons/io";
 
 export const DashboardTopbar = () => {
   return (
-    <header className="rounded flex flex-row p-2 justify-between">
+    <header className="flex flex-row py-4 px-6 justify-between border-b-[0.5px] border-zinc-700">
       <div>
         <h1 className="font-bold">Home</h1>
         <h2>Monitor all of your projects and tasks here</h2>
