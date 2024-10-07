@@ -39,7 +39,7 @@ export function Sidebar() {
   }, []);
   const pathname = usePathname();
   return (
-    <div className="p-3 min-w-[200px] max-w-[200px] bg-zinc-900">
+    <div className="p-3 min-w-[200px] max-w-[200px] bg-zinc-900 border-zinc-700 border-r-[0.5px]">
       <Link href="/w/dashboard">
         <div id="logo" className="flex flex-row items-center py-2 cursor-pointer">
           <RiTaskFill size={35} className="text-indigo-500" />

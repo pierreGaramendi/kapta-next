@@ -70,8 +70,8 @@ const TaskDetails: React.FC<TaskDetailsProps> = ({ assignee, sprint, team, creat
 
 export const TaskComponent: React.FC = () => {
   return (
-    <div className="bg-zinc-900 text-white flex flex-col">
-      <header className=" bg-zinc-800 p-4 flex flex-row justify-between items-center">
+    <div className="bg-zinc-900 text-white flex flex-col rounded-t">
+      <header className=" bg-zinc-800 p-4 flex flex-row justify-between items-center rounded-t">
         <section>
           <h1 className="font-bold">PSSCRUM-2</h1>
         </section>
@@ -82,9 +82,9 @@ export const TaskComponent: React.FC = () => {
           <ButtonConfig></ButtonConfig>
         </section>
       </header>
-      <div className="w-full flex flex-row">
+      <div className="w-full flex flex-row rounded-b">
         {/* Main Content */}
-        <main className="p-6 w-9/12">
+        <main className="p-6 w-9/12 rounded-bl">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-2xl font-semibold">Historia 1</h1>
             <button className="bg-zinc-700 text-sm py-1 px-4 rounded">Adjuntar</button>
@@ -129,7 +129,7 @@ export const TaskComponent: React.FC = () => {
         </main>
 
         {/* Details Panel */}
-        <aside className=" bg-zinc-800 py-4 px-6 w-3/12">
+        <aside className=" bg-zinc-800 py-4 px-6 w-3/12 rounded-br">
           <TaskDetails
             assignee="Pierre Garamendi Marquez"
             sprint="Tablero Sprint 2"

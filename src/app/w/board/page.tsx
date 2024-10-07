@@ -70,7 +70,6 @@ export default function Page() {
   const [columns, setColumns] = useState(initialColumns);
   return (
     <>
-      <DashboardTopbar />
       <main className="flex-1 flex flex-col bg-zinc-950">
         <div className="flex-1 p-6 overflow-x-auto">
           <div>
@@ -81,7 +80,7 @@ export default function Page() {
                     <h2 className="text-lg font-semibold mb-4">{column.title}</h2>
                     {column.tasks.map((task, index) => (
                       <div id="task" key={task.id} onClick={toOpenModal} className="cursor-pointer">
-                        <div className="bg-zinc-900 p-4 rounded mb-3 shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <div className="bg-zinc-800 p-4 rounded mb-3 shadow-sm hover:shadow-md transition-shadow duration-200">
                           <h3 className="font-semibold mb-2">{task.title}</h3>
                           <p className="text-sm text-gray-400 mb-3">{task.description}</p>
                           <div className="flex items-center justify-between text-xs">
@@ -117,7 +116,7 @@ export default function Page() {
           </div>
         </div>
       </main>
-      <Modal isDismissable isOpen={isOpen} onOpenChange={setOpen}>
+      <Modal isDismissable isOpen={isOpen} onOpenChange={setOpen} className="max-w-[80%] rounded">
         <Dialog>
           <TaskComponent></TaskComponent>
         </Dialog>
