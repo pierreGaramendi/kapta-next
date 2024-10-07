@@ -16,8 +16,8 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ totalPercentage, secti
     <div className="w-full">
       {/* Texto de porcentaje */}
       <div className="flex flex-row justify-between">
-        <div className="text-center font-semibold mb-2">Progress</div>
-        <div className="text-center font-semibold mb-2">{totalPercentage}%</div>
+        <div className="text-center mb-2">Progress</div>
+        <div className="text-center mb-2">{totalPercentage}%</div>
       </div>
 
       {/* Contenedor de la barra de progreso */}
