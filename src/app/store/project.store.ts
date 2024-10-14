@@ -1,5 +1,5 @@
 import { create } from "zustand";
-interface IProject {
+export interface IProject {
   _id: string;
   name: string;
   description: string;
@@ -11,7 +11,11 @@ interface IProject {
   sprints: any[];
   members: any[];
 }
-export const useStoreProjects = create((set) => {
+export interface IStateProject {
+  projects: IProject[];
+}
+
+export const useStoreProjects = create<IStateProject>((set) => {
   return {
     projects: [
       {

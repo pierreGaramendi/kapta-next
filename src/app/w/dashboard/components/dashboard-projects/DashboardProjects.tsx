@@ -1,9 +1,11 @@
+"use client";
+import { IProject, IStateProject, useStoreProjects } from "@/app/store/project.store";
 import { BacklogItem } from "@/app/w/components/backlog-item/BacklogItem";
 import { ProjectItem } from "@/app/w/components/project-item/ProjectItem";
 
 type Props = {};
 export const DashboardProjects = ({}: Props) => {
-  const tasks = [1, 2, 3, 4, 5, 6, 7];
+  const { projects } = useStoreProjects((state: IStateProject) => state);
   return (
     <div className="w-full rounded mt-2">
       <div id="title" className="font-bold sticky w-full py-4">
@@ -11,8 +13,8 @@ export const DashboardProjects = ({}: Props) => {
       </div>
       <hr className="border-zinc-700" />
       <div id="content" className="h-full py-4 flex flex-col gap-3">
-        {tasks.map((index: number) => (
-         <ProjectItem></ProjectItem>
+        {projects.map((project, index: number) => (
+          <ProjectItem key={index} project={project}></ProjectItem>
         ))}
       </div>
     </div>
